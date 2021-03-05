@@ -191,7 +191,7 @@ public class BeerServiceTest {
     }
 
     @Test
-    void whenDecrementIsCalledThenDecrementBeerStock() throws BeerNotFoundException, BeerStockExceededException, BeerStockNegativeException {
+    void whenDecrementIsCalledThenDecrementBeerStock() throws BeerNotFoundException, BeerStockNegativeException {
         BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
         Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
 
@@ -207,7 +207,7 @@ public class BeerServiceTest {
     }
 
     @Test
-    void whenDecrementIsCalledToEmptyStockThenEmptyBeerStock() throws BeerNotFoundException, BeerStockExceededException, BeerStockNegativeException {
+    void whenDecrementIsCalledToEmptyStockThenEmptyBeerStock() throws BeerNotFoundException, BeerStockNegativeException {
         BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
         Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
 
